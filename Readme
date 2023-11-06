@@ -1,8 +1,8 @@
 Topic:
-The idea of this project is to provide the restaurants with which we cooperate with detailed monthly reports about their performance. The platform, that we use to deliver their products, offers essential data which we can use to give them valuable insights. 
+The idea of this project is to provide restaurants with detailed monthly reports about their performance. The platform, that we use to deliver their products, offers essential data which we can use to give them valuable insights. 
 
 Tools: 
-When I first got the problem, I planned to use only Excel for data cleaning, and graphs preparation, and PowerPoint for reporting. Now, I am grateful that I can use: Talend to transform my data, and Power BI to load and visualize it. 
+Talend to transform my data, and Power BI to load and visualize it. 
 
 Data sources: 
 My data sources are divided into three types: 
