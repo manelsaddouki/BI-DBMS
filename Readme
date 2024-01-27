@@ -1,23 +1,24 @@
-Topic:
+## Topic:
 The idea of this project is to provide restaurants with detailed monthly reports about their performance. The platform, that we use to deliver their products, offers essential data which we can use to give them valuable insights. 
 
-Tools: 
+## Tools: 
 Talend to transform my data, and Power BI to load and visualize it. 
 
-Data sources: 
+## Data sources: 
 My data sources are divided into three types: 
-1. Excel:
+
+### 1. Excel:
 ‘Time’: details related to the delivery time of each order 
 
-2. CSV: 
+### 2. CSV: 
 ‘Commandes’: Main information about orders 
 ‘Articles’: Detailed data about each specific article sold 
 
-3. JSON:
+### 3. JSON:
 ‘Reclamations’: Claims received from clients 
 
 
-Main Steps:
+## Main Steps:
 I. Data Cleaning:
 As a first step, I checked my data sources. I made sure that my data is consistent, complete, and relevant. 
 
