@@ -1,10 +1,10 @@
-## Topic:
+##Topic:
 The idea of this project is to provide restaurants with detailed monthly reports about their performance. The platform, that we use to deliver their products, offers essential data which we can use to give them valuable insights. 
 
-## Tools: 
+##Tools: 
 Talend to transform my data, and Power BI to load and visualize it. 
 
-## Data sources: 
+##Data sources: 
 My data sources are divided into three types: 
 
 ### 1. Excel:
