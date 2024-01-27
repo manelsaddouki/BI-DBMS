@@ -1,10 +1,10 @@
 # Topic:
 The idea of this project is to provide restaurants with detailed monthly reports about their performance. The platform, that we use to deliver their products, offers essential data which we can use to give them valuable insights. 
 
-##Tools: 
+## Tools: 
 Talend to transform my data, and Power BI to load and visualize it. 
 
-##Data sources: 
+## Data sources: 
 My data sources are divided into three types: 
 
 ### 1. Excel:
@@ -114,3 +114,4 @@ This restaurant had the highest number of claims compared to the others => The m
 II. I published the report and created a dashboard on the Power BI service + I pin three cards that highlight total revenues + total nb of orders during the month + nb of categories the business has.
 
 ‼️ The report & the dashboard are both submitted with this document  ‼️
+
