@@ -1,5 +1,5 @@
-# Topic:
-The idea of this project is to provide restaurants with detailed monthly reports about their performance. The platform, that we use to deliver their products, offers essential data which we can use to give them valuable insights. 
+## Topic:
+The idea of this project is to provide restaurants with detailed monthly reports about their performance.  
 
 ## Tools: 
 Talend to transform my data, and Power BI to load and visualize it. 
@@ -19,19 +19,19 @@ My data sources are divided into three types:
 
 
 ## Main Steps:
-I. Data Cleaning:
+### I. Data Cleaning:
 As a first step, I checked my data sources. I made sure that my data is consistent, complete, and relevant. 
 
-II. Talend: I prepared 3 main jobs:
+### II. Talend: 
 
-N.B: when I downloaded my file sources, I set ‘0’ as the default value (for columns related to prices/revenues). So that I won’t have any null value.  
+I prepared 3 main jobs:
 
-First job (Revenuesvsdate): a job where I used tMap to: 
+#### First job (Revenuesvsdate): a job where I used tMap to: 
 Link data about orders (‘Commandes’ file) with details about timing (‘time’ file) 
 Filter only the orders that weren’t canceled (code: row1.Annulee_.equals ("Non"))
 => We got an output Excel file with the filtered data 
 
-Second job (part3):
+#### Second job (part3):
  I used tMap to link data about articles (‘Articles’ file) with details about timing (‘time’ file)
 Filter the orders that weren’t canceled 
  => We got an output Excel file ‘Part 3
@@ -41,19 +41,19 @@ Sorted the output file in ascending way (Sorted by Category and Article)
  => We got an output Excel file ‘Aggregation out3’
 
 
-Third job (part4): 
+#### Third job (part4): 
 I transformed my JSON file into an output Excel file
 I filtered the data to get only the claims that are due to a restaurant’s fault not the startup’s,. 
  => We got an output CSV file ‘Part 4’
 
-
-
 => Talend is my staging area where I extracted my data and then transformed it. 
+N.B: when I downloaded my file sources, I set ‘0’ as the default value (for columns related to prices/revenues). So that I won’t have any null value.  
 
-III. Power BI: 
 
-Data Warehouse part:
-             I loaded my data on my Power BI Desktop:
+### III. Power BI: 
+
+#### Data Warehouse part:
+I loaded my data on my Power BI Desktop:
 I created three new tables 
 I grouped the ‘total number of orders per date’ 
 I grouped from the new table the ‘number of work days per weekday’ 
@@ -61,9 +61,9 @@ I grouped data (from the 2nd Talend output table) per category => article => wee
 Then I used Power Query Formula Language (‘M’ language) to import the nb of work days per weekday (used the VLOOKUP function)
 Finally, I added new columns to count the average of articles sold (used the DIVIDE function)
 
-Data Modeling: I created the relationships between my facts and dimensions tables.
+#### Data Modeling: 
 
-
+I created the relationships between my facts and dimensions tables.
 => ‘time slot’ is the principal fact table that I created from two dimensions
 => ‘nb of orders per day’ is an aggregation table I made from Out1
 => ‘nb of work days’ is an aggregation table I created from ‘nb of orders per day’
@@ -73,9 +73,9 @@ I renamed my tables and columns in a user-friendly way
 I created new columns: e.g Id day (I needed this column to sort weekdays in my matrices from Monday to Sunday and not in alphabetical order)
 
 
-B. Data Visualization:
+#### Data Visualization:
 
-I. I created a report that includes 7 pages:
+##### I. I created a report that includes 7 pages:
 
 1. Orders vs dates 
 We can notice that the highest revenues were on the 18th and the lowest were on the 16th: the manager should investigate the reasons for such a decrease 
@@ -110,7 +110,7 @@ During the weekend (Th-Su) the pick was between 7 pm-10 pm
 The number of claims was 18 with 9 claims because of ‘Missed Articles’: employees must check the order before they deliver it
 This restaurant had the highest number of claims compared to the others => The manager should set a strategy to avoid such a number in the future ( Possible solution: add a staff member who should verify the nb and the quality of the articles before it gets delivered) 
 
-II. I published the report and created a dashboard on the Power BI service + I pin three cards that highlight total revenues + total nb of orders during the month + nb of categories the business has.
+##### II. I published the report and created a dashboard on the Power BI service + I pin three cards that highlight total revenues + total nb of orders during the month + nb of categories the business has.
 
-‼️ The report & the dashboard are both submitted with this document  ‼️
+‼️ The report & the dashboard are both submitted in this repository  ‼️
 
